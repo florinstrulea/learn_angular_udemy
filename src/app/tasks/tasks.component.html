@@ -7,7 +7,7 @@
   </header>
 
   <ul>
-    <li *ngFor="let task of userTasks">
+    <li *ngFor="let task of selectedUserTask">
       <app-task [task]="task" (delete)="onDeleteTask($event)"></app-task>
     </li>
   </ul>
@@ -15,5 +15,5 @@
 <add-task
   *ngIf="showAddTasks"
   (closeDialog)="closeDialog($event)"
-  (addTask)="createTask($event)"
+  [userId]="user?.id!"
 />
