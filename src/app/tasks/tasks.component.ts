@@ -17,7 +17,6 @@ export class TasksComponent {
   @Input({ required: true }) user?: User;
   showAddTasks: boolean = false;
 
-  onDeleteTask(id: string) {}
   get selectedUserTask() {
     return this.taskService.getUserTasks(this.user?.id!);
   }
